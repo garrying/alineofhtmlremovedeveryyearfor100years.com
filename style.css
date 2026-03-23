@@ -1,0 +1,225 @@
+:root {
+  color-scheme: light dark;
+}
+
+a,
+code,
+em,
+strong {
+  display: inline;
+}
+* {
+  display: block;
+  margin: 0;
+  position: unset;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Monospace;
+  padding: 0;
+  text-decoration: none;
+}
+
+html, body, head {
+  margin-left: 1ch;
+}
+
+/* tags with attributes. */
+
+a[href]::before {
+  content: "<a href='" attr(href) "'>";
+}
+link[rel]::before {
+  content: "<link rel='" attr(rel) "' href='" attr(href)
+    "'>";
+}
+meta[content]::before {
+  content: "<meta name='" attr(name) "' content='"
+    attr(content) "' />";
+}
+meta[charset]::before {
+  content: "<meta charset='" attr(charset) "' />";
+}
+footer[style]::before {
+  content: "<footer style='"attr(style)"'>";
+}
+footer[style]::after {
+  content: "</footer>";
+}
+
+/* special escaping for close style */
+style::before {
+  content: "<style>";
+}
+style::after {
+  content: "<\/style>";
+}
+
+/* here is the highly repetitive bit */
+p::before {
+  content: "<p>";
+}
+p::after {
+  content: "</p>";
+}
+html::before {
+  margin-left: -1ch;
+  content: "<html>";
+}
+html::after {
+  margin-left: -1ch;
+  content: "</html>";
+}
+head::before {
+  margin-left: -1ch;
+  content: "<head>";
+}
+head::after {
+  margin-left: -1ch;
+  content: "</head>";
+}
+title::before {
+  content: "<title>";
+}
+title::after {
+  content: "</title>";
+}
+link::before {
+  content: "<link>";
+}
+body::before {
+  margin-left: -1ch;
+  content: "<body>";
+}
+body::after {
+  margin-left: -1ch;
+  content: "</body>";
+}
+h1::before {
+  content: "<h1>";
+}
+h1::after {
+  content: "</h1>";
+}
+h2::before {
+  content: "<h2>";
+}
+h2::after {
+  content: "</h2>";
+}
+p::before {
+  content: "<p>";
+}
+p::after {
+  content: "</p>";
+}
+pre::before {
+  content: "<pre>";
+}
+pre::after {
+  content: "</pre>";
+}
+code::before {
+  content: "<code>";
+}
+code::after {
+  content: "</code>";
+}
+a::before {
+  content: "<a>";
+}
+a::after {
+  content: "</a>";
+}
+aside::before {
+  content: "<aside>";
+}
+aside::after {
+  content: "</aside>";
+}
+blockquote::before {
+  content: "<blockquote>";
+}
+blockquote::after {
+  content: "</blockquote>";
+}
+em::before {
+  content: "<em>";
+}
+em::after {
+  content: "</em>";
+}
+strong::before {
+  content: "<strong>";
+}
+strong::after {
+  content: "</strong>";
+}
+footer::before {
+  content: "<footer>";
+}
+footer::after {
+  content: "</footer>";
+}
+button::before {
+  content: "<button>";
+}
+button::after {
+  content: "</button>";
+}
+dialog::before {
+  content: "<dialog>";
+}
+dialog::after {
+  content: "</dialog>";
+}
+figure::before {
+  content: "<figure>";
+}
+figure::after {
+  content: "</figure>";
+}
+figcaption::before {
+  content: "<figcaption>";
+}
+figcaption::after {
+  content: "</figcaption>";
+}
+blockquote::before {
+  content: "<blockquote>";
+}
+blockquote::after {
+  content: "</blockquote>";
+}
+code::before {
+  content: "<code>";
+}
+code::after {
+  content: "</code>";
+}
+ul::before {
+  content: "<ul>";
+}
+ul::after {
+  content: "</ul>";
+}
+li::before {
+  content: "<li>";
+}
+li::after {
+  content: "</li>";
+}
+div::before {
+  content: "<div>";
+}
+div::after {
+  content: "</div>";
+}
+header::before {
+  content: "<header>";
+}
+header::after {
+  content: "</header>";
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a line of html removed every year for 100 years</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>a line of html removed every year for 100 years</h1>
+    <button commandfor="confirm-dialog" command="show-modal">
+      Delete Record
+    </button>
+    <dialog id="confirm-dialog">
+      <header>
+        <h1>Delete Record?</h1>
+      </header>
+      <p>Are you sure? This action cannot be undone</p>
+      <footer>
+        <button commandfor="confirm-dialog" command="close" value="cancel">
+          Cancel
+        </button>
+        <button commandfor="confirm-dialog" command="close" value="delete">
+          Delete
+        </button>
+      </footer>
+    </dialog>
+    <p>
+      Separating paragraphs with blank lines is easiest for readers to scan, but
+      they can also be separated by indenting their first lines. This is often
+      used to take up less space, such as to save paper in print.
+    </p>
+
+    <p>
+      Writing that is intended to be edited, such as school papers and rough
+      drafts, uses both blank lines and indentation for separation. In finished
+      works, combining both is considered redundant and amateurish.
+    </p>
+
+    <p>
+      In very old writing, paragraphs were separated with a special character:
+      ¶, the <i>pilcrow</i>. Nowadays, this is considered claustrophobic and
+      hard to read.
+    </p>
+
+    <p>
+      How hard to read? See for yourself:
+      <button data-toggle-text="Oh no! Switch back!">
+        Use pilcrow for paragraphs
+      </button>
+    </p>
+    <figure>
+      <pre role="img" aria-label="ASCII COW">
+            ___________________________
+        &lt; I'm an expert in my field. &gt;
+            ---------------------------
+                \   ^__^
+                  \  (oo)\_______
+                    (__)\       )\/\
+                        ||----w |
+                        ||     ||
+        </pre>
+
+      <figcaption id="cow-caption">
+        A cow saying, "I'm an expert in my field." The cow is illustrated using
+        preformatted text characters.
+      </figcaption>
+    </figure>
+    <figure>
+      <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+      <pre>
+      function NavigatorExample() {
+        let txt = `Browser CodeName: ${navigator.appCodeName};\n`;
+        txt += `Browser Name: ${navigator.appName};\n`;
+        txt += `Browser Version: ${navigator.appVersion};\n`;
+        txt += `Cookies Enabled: ${navigator.cookieEnabled};\n`;
+        txt += `Platform: ${navigator.platform};\n`;
+        txt += `User-agent header: ${navigator.userAgent};`;
+        console.log("NavigatorExample", txt);
+      }
+      </pre>
+    </figure>
+    <footer
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        text-align: right;
+        width: 100%;
+      "
+    >
+      <p>
+        This is a
+        <a href="https://sundaysites.cafe/">Sunday Site</a>
+        made by
+        <a href="https://sundaysites.cafe/~*garry*"> garry</a>.
+      </p>
+    </footer>
+  </body>
+</html>
