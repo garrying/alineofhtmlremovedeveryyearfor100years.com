@@ -1,0 +1,22 @@
+name: remove 1 line
+
+on:
+  schedule:
+    - cron: "0 0 1 1 *"
+
+jobs:
+  trim:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: trim and push
+        run: |
+          sed -i '$d' index.html
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "remove last line ($(date +'%Y'))"
+          git push
